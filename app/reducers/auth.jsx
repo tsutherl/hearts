@@ -26,13 +26,13 @@ export const logout = () =>
       .then(() => dispatch(whoami()))
       .catch(() => dispatch(whoami()))
 
-export const whoami = () =>
-  dispatch =>
-    axios.get('/api/auth/whoami')
-      .then(response => {
-        const user = response.data
-        dispatch(authenticated(user))
-      })
-      .catch(failed => dispatch(authenticated(null)))
+// export const whoami = () =>
+//   dispatch =>
+//     axios.get('/api/auth/whoami')
+//       .then(response => {
+//         const user = response.data
+//         dispatch(authenticated(user))
+//       })
+//       .catch(failed => dispatch(authenticated(null)))
 
 export default reducer
